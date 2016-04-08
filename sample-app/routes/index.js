@@ -28,7 +28,7 @@ router.post('/login',function(req,res){
 
 router.get('/home',function(req,res){
     if(req.session.key) {
-        res.render("home.html",{ email : req.session.key["user_name"]});
+        res.render("home.ejs",{ email : req.session.key["user_name"]});
     } else {
         res.redirect("/");
     }
