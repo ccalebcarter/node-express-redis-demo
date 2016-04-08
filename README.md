@@ -9,3 +9,8 @@ Simple node express application that stores login sessions in Redis
   > run the app:
      $ DEBUG=sample-app:* npm start
 
+## URL
+
+> http://localhost:3000/
+
+
