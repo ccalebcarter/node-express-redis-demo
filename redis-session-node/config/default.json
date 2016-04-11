@@ -1,0 +1,19 @@
+{
+  "UserStore": {
+    "dbConfig": {
+      "connectionLimit": 100,
+      "host": "localhost",
+      "user": "jon",
+      "password": "",
+      "database": "redis_demo",
+      "debug": false
+    }
+  },
+  "SessionCache": {
+    "redisStore": {
+      "host": "localhost",
+      "port": 6379,
+      "ttl": 260
+    }
+  }
+}

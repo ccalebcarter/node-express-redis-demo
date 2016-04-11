@@ -14,6 +14,7 @@ var client = redis.createClient();
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var routes = require('./routes/index');
+var config = require('config');
 var app = express();
 
 
@@ -26,9 +27,11 @@ app.set('view engine', 'ejs');
 // We pass Redis credentials and port information.
 // And express does the rest !
 
+var sessionConfig = config.get('SessionCache.redisStore');
+
 app.use(session({
     secret: 'ssshhhhh',
-    store: new redisStore({host: 'localhost', port: 6379, client: client, ttl: 260}),
+    store: new redisStore({host: sessionConfig.host, port: sessionConfig.port, client: client, ttl: sessionConfig.ttl}),
     saveUninitialized: false,
     resave: false
 }));

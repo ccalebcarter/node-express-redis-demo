@@ -3,17 +3,20 @@
  */
 var async = require("async");
 var mysql = require("mysql");
+var config = require('config');
+
+var dbConfig = config.get('UserStore.dbConfig');
 
 // Always use MySQL pooling.
 // Helpful for multiple connections.
 
 var pool = mysql.createPool({
-    connectionLimit: 100,
-    host: 'localhost',
-    user: 'jon',
-    password: '',
-    database: 'redis_demo',
-    debug: false
+    connectionLimit: dbConfig.connectionLimit,
+    host: dbConfig.host,
+    user: dbConfig.user,
+    password: dbConfig.password,
+    database: dbConfig.database,
+    debug: dbConfig.debug
 });
 
 
