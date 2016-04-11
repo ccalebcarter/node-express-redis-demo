@@ -26,7 +26,6 @@ app.set('view engine', 'ejs');
 // Here we tell Express to use Redis as session store.
 // We pass Redis credentials and port information.
 // And express does the rest !
-
 var sessionConfig = config.get('SessionCache.redisStore');
 
 app.use(session({
