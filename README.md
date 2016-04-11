@@ -4,10 +4,10 @@ Simple node express application that stores login sessions in Redis
 ## Run in Local Dev Environement
 
  > install dependencies:
-     $ cd sample-app && npm install
+     $ cd redis-session-node && npm install
 
   > run the app:
-     $ DEBUG=sample-app:* npm start
+     $ DEBUG=redis-session-node:* npm start
 
   > access the app
   > http://localhost:3000
