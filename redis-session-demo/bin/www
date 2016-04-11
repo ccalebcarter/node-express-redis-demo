@@ -5,7 +5,7 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('sample-app:server');
+var debug = require('debug')('redis-session-demo:server');
 var http = require('http');
 
 /**
