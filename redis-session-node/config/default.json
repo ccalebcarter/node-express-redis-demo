@@ -13,7 +13,7 @@
     "redisStore": {
       "host": "localhost",
       "port": 6379,
-      "ttl": 260
+      "ttl": 600
     }
   }
 }
