@@ -13,7 +13,7 @@
       $("#username").hide();
       $('#login-submit').click(function(e){
         if($(this).attr('value') === 'Register') {
-          $.post("http://localhost:3000/register",{
+          $.post("http://redis-session-node.pmchq4hrnn.us-west-2.elasticbeanstalk.com:3000/register",{
             user_name : $("#username").val(),
             user_email : $("#useremail").val(),
             user_password : $("#password").val()
@@ -26,7 +26,7 @@
             }
           });
         } else {
-          $.post("http://localhost:3000/login",{
+          $.post("http://redis-session-node.pmchq4hrnn.us-west-2.elasticbeanstalk.com:3000/login",{
             user_email : $("#useremail").val(),
             user_password : $("#password").val()
           },function(data){

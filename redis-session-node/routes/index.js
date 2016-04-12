@@ -1,6 +1,9 @@
 var express = require('express');
 var router = express.Router();
 var dataAccess = require('../data-access');
+var winston = require('winston');
+
+var logger = new 
 
 
 /* GET home page. */
