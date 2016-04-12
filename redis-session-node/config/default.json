@@ -3,6 +3,10 @@
     "dbConfig": {
       "connectionLimit": 100,
       "database": "redis_demo",
+      "user": "jon",
+      "host": "aa16i6wca9lqt3.cz8g7hu96ocg.us-west-2.rds.amazonaws.com",
+      "port": 3306,
+      "password": "password",
       "debug": false
     }
   },

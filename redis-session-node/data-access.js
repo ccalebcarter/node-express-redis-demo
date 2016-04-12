@@ -13,10 +13,10 @@ var dbConfig = config.get('UserStore.dbConfig');
 
 var pool = mysql.createPool({
     connectionLimit: dbConfig.connectionLimit,
-    host: process.env.RDS_HOSTNAME,
-    user: process.env.RDS_USERNAME,
-    password: process.env.RDS_PASSWORD,
-    port: process.env.RDS_PORT,
+    host: dbConfig.host,
+    user: dbConfig.user,
+    password: dbConfig.password,
+    port: dbConfig.port,
     database: dbConfig.database,
     debug: dbConfig.debug
 });
