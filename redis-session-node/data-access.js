@@ -5,6 +5,7 @@ var async = require("async");
 var mysql = require("mysql");
 var config = require('config');
 
+process.env.NODE_ENV = "development";
 var dbConfig = config.get('UserStore.dbConfig');
 
 // Always use MySQL pooling.
@@ -12,13 +13,13 @@ var dbConfig = config.get('UserStore.dbConfig');
 
 var pool = mysql.createPool({
     connectionLimit: dbConfig.connectionLimit,
-    host: dbConfig.host,
-    user: dbConfig.user,
-    password: dbConfig.password,
+    host: process.env.RDS_HOSTNAME,
+    user: process.env.RDS_USERNAME,
+    password: process.env.RDS_PASSWORD,
+    port: process.env.RDS_PORT,
     database: dbConfig.database,
     debug: dbConfig.debug
 });
-
 
 module.exports = function (req,type,callback) {
     async.waterfall([
