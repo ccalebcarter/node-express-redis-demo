@@ -1,0 +1,6 @@
+{
+  "name": "Node-express-redis-demo",
+  "tagline": "Simple node express application that stores login sessions in Redis",
+  "body": "# node-express-redis-demo\r\nSimple node express application that stores login sessions in Redis\r\n\r\n## Run in Local Dev Environement\r\n\r\n > install dependencies:\r\n     $ cd redis-session-node && npm install\r\n\r\n  > run the app:\r\n     $ DEBUG=redis-session-node:* npm start\r\n\r\n  > access the app\r\n  > http://localhost:3000\r\n\r\n\r\n##  Deploy via Elasticbeanstalk\r\n\r\n> 1.  Configure AWS cli to point to desired AWS environment\r\n> 2.  Follow below guide ...\r\n\r\n> http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_nodejs_express.html\r\n\r\n\r\n\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
