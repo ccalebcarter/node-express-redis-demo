@@ -16,7 +16,6 @@ var logger = require('morgan');
 var routes = require('./routes/index');
 var config = require('config');
 var app = express();
-var winston = require('winston');
 
 
 // view engine setup
@@ -28,8 +27,7 @@ app.set('view engine', 'ejs');
 // We pass Redis credentials and port information.
 // And express does the rest !
 var sessionConfig = config.get('SessionCache.redisStore');
-winston.level = "info";
-winston.log('info', sessionConfig.toString());
+console.log(sessionConfig);
 
 app.use(session({
     secret: 'ssshhhhh',

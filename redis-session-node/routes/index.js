@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 var dataAccess = require('../data-access');
-var winston = require('winston');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -9,6 +8,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/login',function(req,res){
+    console.log('/login ' + req);
     dataAccess(req,"login",function(response){
         if(response === null) {
             res.json({"error" : "true","message" : "Database error occured"});
@@ -19,6 +19,7 @@ router.post('/login',function(req,res){
                     "message" : "Login failed ! Please register"
                 });
             } else {
+                console.log(req.session);
                 req.session.key = response;
                 res.json({"error" : false,"message" : "Login success."});
             }
