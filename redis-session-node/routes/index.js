@@ -3,9 +3,6 @@ var router = express.Router();
 var dataAccess = require('../data-access');
 var winston = require('winston');
 
-var logger = new 
-
-
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });

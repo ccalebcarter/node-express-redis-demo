@@ -10,7 +10,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
-            $.get("http://localhost:3000/fetchStatus",function(res){
+            $.get("http://redis-session-node.pmchq4hrnn.us-west-2.elasticbeanstalk.com/fetchStatus",function(res){
                 $.each(res.message,function(index,value) {
                     $("#showStatus").append('You have posted <br> <p>'+value.user_status+'</p><hr>');
                 });
