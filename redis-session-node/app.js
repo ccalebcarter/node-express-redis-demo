@@ -27,7 +27,6 @@ app.set('view engine', 'ejs');
 // We pass Redis credentials and port information.
 // And express does the rest !
 var sessionConfig = config.get('SessionCache.redisStore');
-console.log(sessionConfig);
 
 app.use(session({
     secret: 'ssshhhhh',
@@ -47,6 +46,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // setup routes
 app.use('/', routes);
 app.use('/home', routes);
+app.use('/login', routes);
 
 
 

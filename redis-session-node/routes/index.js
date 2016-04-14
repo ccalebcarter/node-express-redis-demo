@@ -8,7 +8,6 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/login',function(req,res){
-    console.log('/login ' + req);
     dataAccess(req,"login",function(response){
         if(response === null) {
             res.json({"error" : "true","message" : "Database error occured"});
