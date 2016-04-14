@@ -12,7 +12,7 @@
   },
   "SessionCache": {
     "redisStore": {
-      "host": "jon-test-001.zmrvj4.0001.usw2.cache.amazonaws.com",
+      "host": "jon-test.zmrvj4.ng.0001.usw2.cache.amazonaws.com",
       "port": 6379,
       "ttl": 600
     }

@@ -4,6 +4,7 @@ var dataAccess = require('../data-access');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
+ 
   res.render('index', { title: 'Express' });
 });
 
@@ -18,7 +19,7 @@ router.post('/login',function(req,res){
                     "message" : "Login failed ! Please register"
                 });
             } else {
-                console.log(req.session);
+                console.log(req.session.id);
                 req.session.key = response;
                 res.json({"error" : false,"message" : "Login success."});
             }

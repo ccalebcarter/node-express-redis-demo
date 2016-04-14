@@ -10,7 +10,6 @@ var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var path = require("path");
 var async = require("async");
-var client = redis.createClient();
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var routes = require('./routes/index');
@@ -28,12 +27,18 @@ app.set('view engine', 'ejs');
 // And express does the rest !
 var sessionConfig = config.get('SessionCache.redisStore');
 
+var client = redis.createClient(sessionConfig.port, sessionConfig.host);
+
+//var client = redis.createClient(6379, '127.0.0.1');
+
 app.use(session({
     secret: 'ssshhhhh',
-    store: new redisStore({host: sessionConfig.host, port: sessionConfig.port, client: client, ttl: sessionConfig.ttl}),
+    store: new redisStore({client: client}),
     saveUninitialized: false,
     resave: false
 }));
+
+
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
