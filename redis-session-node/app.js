@@ -27,7 +27,7 @@ app.set('view engine', 'ejs');
 // And express does the rest !
 var sessionConfig = config.get('SessionCache.redisStore');
 
-var client = redis.createClient(sessionConfig.port, sessionConfig.host);
+var client = redis.createClient(sessionConfig.port, sessionConfig.host,  {no_ready_check: true});
 
 //var client = redis.createClient(6379, '127.0.0.1');
 

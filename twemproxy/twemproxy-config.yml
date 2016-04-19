@@ -1,5 +1,5 @@
 twem-1:
-  listen: 127.0.0.1:22121
+  listen: ec2-52-38-229-54.us-west-2.compute.amazonaws.com:22121
   hash: fnv1a_64
   distribution: ketama
   redis: true
