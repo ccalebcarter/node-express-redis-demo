@@ -7,9 +7,10 @@ Simple node express application that stores login sessions in Redis.  This solut
 + AWS CLI: https://aws.amazon.com/cli/
 + MySQL Workbench:  https://www.mysql.com/products/workbench/ (if desired)
 
-## Cone Repo, Create and Push a new Branch
+## Clone Repo, Create and Push a new Branch
 ```bash
 git clone git@github.com:redapt/node-express-redis-demo.git
+https://github.com/redapt/node-express-redis-demo.git (in case your set up differently)
 git checkout -b [name_of_your_new_branch]
 git push origin [name_of_your_new_branch]
 ```
